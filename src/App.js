@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/Front-Ecomere' element={<FrontEndMentor_Ecomere/>}/>
+        <Route path='/' element={<FrontEndMentor_Ecomere/>}/>
       </Routes>
     </Router>
   );
