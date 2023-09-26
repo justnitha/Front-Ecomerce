@@ -1,19 +1,31 @@
 {
   "files": {
-    "main.css": "/Front-Ecomerce/static/css/main.d2762204.css",
-    "main.js": "/Front-Ecomerce/static/js/main.2812752a.js",
+    "main.css": "/Front-Ecomerce/static/css/main.7c24a4f1.css",
+    "main.js": "/Front-Ecomerce/static/js/main.7b07b40e.js",
     "static/js/787.0173ad92.chunk.js": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js",
+    "static/media/image-product-2.jpg": "/Front-Ecomerce/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
+    "static/media/image-product-1.jpg": "/Front-Ecomerce/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/image-product-3.jpg": "/Front-Ecomerce/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
+    "static/media/image-product-4.jpg": "/Front-Ecomerce/static/media/image-product-4.9962862ef3eff6d65e5b.jpg",
     "static/media/slick.svg": "/Front-Ecomerce/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Front-Ecomerce/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Front-Ecomerce/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Front-Ecomerce/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/icon-delete.svg": "/Front-Ecomerce/static/media/icon-delete.1fd1f1f7d9f8ce5557b44ca3470a18b8.svg",
     "index.html": "/Front-Ecomerce/index.html",
-    "main.d2762204.css.map": "/Front-Ecomerce/static/css/main.d2762204.css.map",
-    "main.2812752a.js.map": "/Front-Ecomerce/static/js/main.2812752a.js.map",
+    "static/media/icon-cart.svg": "/Front-Ecomerce/static/media/icon-cart.38d52531a3fad3262cd4bd428f34b55f.svg",
+    "static/media/icon-plus.svg": "/Front-Ecomerce/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
+    "static/media/icon-minus.svg": "/Front-Ecomerce/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
+    "static/media/icon-close.svg": "/Front-Ecomerce/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
+    "static/media/icon-menu.svg": "/Front-Ecomerce/static/media/icon-menu.c6107d03f1edcf73523ebd8cbc50a443.svg",
+    "static/media/icon-previous.svg": "/Front-Ecomerce/static/media/icon-previous.80616402c611cc0a6651d0b751da8a9b.svg",
+    "static/media/icon-next.svg": "/Front-Ecomerce/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
+    "main.7c24a4f1.css.map": "/Front-Ecomerce/static/css/main.7c24a4f1.css.map",
+    "main.7b07b40e.js.map": "/Front-Ecomerce/static/js/main.7b07b40e.js.map",
     "787.0173ad92.chunk.js.map": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2762204.css",
-    "static/js/main.2812752a.js"
+    "static/css/main.7c24a4f1.css",
+    "static/js/main.7b07b40e.js"
   ]
 }
