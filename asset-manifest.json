@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Front-Ecomerce/static/css/main.d2762204.css",
+    "main.js": "/Front-Ecomerce/static/js/main.67272c05.js",
+    "static/js/787.0173ad92.chunk.js": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js",
+    "static/media/slick.svg": "/Front-Ecomerce/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Front-Ecomerce/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Front-Ecomerce/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Front-Ecomerce/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Front-Ecomerce/index.html",
+    "main.d2762204.css.map": "/Front-Ecomerce/static/css/main.d2762204.css.map",
+    "main.67272c05.js.map": "/Front-Ecomerce/static/js/main.67272c05.js.map",
+    "787.0173ad92.chunk.js.map": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2762204.css",
+    "static/js/main.67272c05.js"
+  ]
+}
