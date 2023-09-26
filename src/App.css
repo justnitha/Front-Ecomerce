@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Kumbh+Sans:wght@300;700&display=swap");
+.ecomerce {
+  font-family: "Cookie", cursive;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+body {
+  overflow-x: hidden;
+}
+.img {
+  width: 10px;
+}
+.hover-filter:hover {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(95%) saturate(703%)
+    hue-rotate(347deg) brightness(100%) contrast(102%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filter {
+  filter: brightness(0) invert(1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.filter-orange {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(95%) saturate(703%)
+    hue-rotate(347deg) brightness(100%) contrast(102%);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+@keyframes bounce {
+  0%,20%,50%,80%,100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.animate-cart {
+  animation: bounce 0.3s;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(95%) saturate(703%)
+    hue-rotate(347deg) brightness(100%) contrast(102%);
 }
 
-.App-link {
-  color: #61dafb;
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-icon:hover .tooltip {
+  display: block;
+}
+
+/* Navbar */
+
+.nav {
+  position: fixed;
+  padding: 1rem;
+  height: 100%;
+  z-index: 30;
+  width: 60%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.5s ease;
 }
