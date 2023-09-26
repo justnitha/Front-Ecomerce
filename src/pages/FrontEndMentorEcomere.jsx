@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useReducer } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import OpenImage from "../components/OpenImage";
+import Icons from "../components/Icons.js"
+
 
 // Inisialisasi state awal
 const initialState = {
@@ -25,6 +27,7 @@ function reducer(state, action) {
           harga: state.harga + 125.0,
         };
       }
+      
     case "decrement":
       if (state.jumlah > 1) {
         return {
@@ -35,16 +38,16 @@ function reducer(state, action) {
       } else if (state.jumlah === 1) {
         return { harga: 125.0, jumlah: 0, name: state.name };
       }
+      break;
     case "addToCart":
-      // Create a new item object
       const newItem = {
         name: state.name,
         harga: state.harga,
         jumlah: state.jumlah,
       };
       console.log(newItem);
-      // Add the new item to the cart array
       return { ...state, cart: [newItem] };
+      
     case "delete":
       return { ...state, cart: [], harga: 125.0, jumlah: 0 };
     default:
@@ -52,7 +55,7 @@ function reducer(state, action) {
   }
 }
 
-export default function FrontEndMentor_Ecomere() {
+export default function FrontEndMentorEcomere() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [active, setAcrtive] = useState(0);
   const [open, setOpen] = useState(false);
@@ -95,7 +98,7 @@ export default function FrontEndMentor_Ecomere() {
         props.onClick(e);
       }}
     >
-      <img src="images/icon-previous.svg" alt="prev" className="hover-filter" />
+      <img src={Icons.previous} alt="prev" className="hover-filter" />
     </button>
   );
 
@@ -106,7 +109,7 @@ export default function FrontEndMentor_Ecomere() {
         props.onClick(e);
       }}
     >
-      <img src="images/icon-next.svg" alt="next" className="hover-filter " />
+      <img src={Icons.next} alt="next" className="hover-filter " />
     </button>
   );
 
@@ -128,8 +131,9 @@ export default function FrontEndMentor_Ecomere() {
           }`}
         >
           <img
-            src={`images/image-product-${i + 1}-thumbnail.jpg`}
+            src={require(`../assets/images/image-product-${i + 1}-thumbnail.jpg`)}
             className={`rounded-md`}
+            alt="paging"
           />
         </div>
       );
@@ -151,25 +155,25 @@ export default function FrontEndMentor_Ecomere() {
       <nav className="lg:flex justify-between items-center border-b hidden">
         <ul className="lg:flex gap-5 items-center cursor-pointer hidden">
           <h1 className="font-bold text-4xl">sneakers</h1>
-          <a href="">
+          <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className=" hover:border-b-2 hover:border-Orange py-6">
               Collections
             </li>
           </a>
-          <a href="">
+          <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className="border-b-2  border-Orange py-6">Men</li>
           </a>
-          <a href="">
+          <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className=" hover:border-b-2 hover:border-Orange py-6">
               Women
             </li>
           </a>
-          <a href="">
+          <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className=" hover:border-b-2 hover:border-Orange py-6">
               About
             </li>
           </a>
-          <a href="">
+          <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className=" hover:border-b-2 hover:border-Orange py-6">
               Contact
             </li>
@@ -181,14 +185,14 @@ export default function FrontEndMentor_Ecomere() {
             className={`cart-icon ${cartAnimation ? "animate-cart" : ""}`}
           >
             <img
-              src="images/icon-cart.svg"
+              src={Icons.cart}
               alt="cart"
               className="hover-filter"
             />
             {/* <div className="tooltip">Teks Pesan Sukses</div> */}
           </button>
           <img
-            src="images/image-avatar.png"
+            src={require('../assets/images/image-avatar.png')}
             alt="avatar"
             className="w-10 hover:border hover:border-Orange rounded-3xl cursor-pointer"
           />
@@ -199,7 +203,7 @@ export default function FrontEndMentor_Ecomere() {
       <nav className="flex justify-between items-center py-2 lg:hidden px-6 bg-white">
         <div className="flex items-center gap-3">
           <img
-            src="images/icon-menu.svg"
+            src={Icons.menu}
             alt="menu"
             className="mt-2 cursor-pointer"
             onClick={openNavbar}
@@ -212,14 +216,14 @@ export default function FrontEndMentor_Ecomere() {
             className={`cart-icon ${cartAnimation ? "animate-cart" : ""}`}
           >
             <img
-              src="images/icon-cart.svg"
+              src={Icons.cart}
               alt="cart"
               className="hover-filter"
             />
             {/* <div className="tooltip">Teks Pesan Sukses</div> */}
           </button>
           <img
-            src="images/image-avatar.png"
+            src={require('../assets/images/image-avatar.png')}
             alt="avatar"
             className="w-8 hover:border hover:border-Orange rounded-3xl cursor-pointer"
           />
@@ -233,25 +237,25 @@ export default function FrontEndMentor_Ecomere() {
           ></div>
           <div className={`nav`}>
             <img
-              src="images/icon-close.svg"
+              src={Icons.close}
               alt="close"
               onClick={openNavbar}
               className="mt-10 hover-filter cursor-pointer"
             />
             <ul className="cursor-pointer mt-10 ">
-              <a href="">
+              <a href="https://justnitha.github.io/Front-Ecomerce/">
                 <li className="mt-3 font-bold text-lg">Collections</li>
               </a>
-              <a href="">
+              <a href="https://justnitha.github.io/Front-Ecomerce/">
                 <li className="mt-3 font-bold text-lg">Men</li>
               </a>
-              <a href="">
+              <a href="https://justnitha.github.io/Front-Ecomerce/">
                 <li className="mt-3 font-bold text-lg">Women</li>
               </a>
-              <a href="">
+              <a href="https://justnitha.github.io/Front-Ecomerce/">
                 <li className="mt-3 font-bold text-lg">About</li>
               </a>
-              <a href="">
+              <a href="https://justnitha.github.io/Front-Ecomerce/">
                 <li className="mt-3 font-bold text-lg">Contact</li>
               </a>
             </ul>
@@ -267,36 +271,36 @@ export default function FrontEndMentor_Ecomere() {
           {/* mobile */}
           <div className="lg:hidden">
             <Slider {...settings} className="mx-auto ">
-              <img src="images/image-product-1.jpg" alt="image-1" />
-              <img src="images/image-product-2.jpg" alt="image-2" />
-              <img src="images/image-product-3.jpg" alt="image-3" />
-              <img src="images/image-product-4.jpg" alt="image-4" />
+              <img src={require('../assets/images/image-product-1.jpg')} alt="gambar 1" />
+              <img src={require('../assets/images/image-product-2.jpg')} alt="gambar 2" />
+              <img src={require('../assets/images/image-product-3.jpg')} alt="gambar 3" />
+              <img src={require('../assets/images/image-product-4.jpg')} alt="gambar 4" />
             </Slider>
           </div>
           {/* desktop */}
           <div className="hidden lg:block">
             <Slider {...settings} className="lg:w-[80%] mx-auto ">
               <img
-                src="images/image-product-1.jpg"
-                alt="image-1"
+                src={require('../assets/images/image-product-1.jpg')}
+                alt="gambar 1"
                 className="lg:rounded-xl"
                 onClick={toggleNavbar}
               />
               <img
-                src="images/image-product-2.jpg"
-                alt="image-2"
+                src={require('../assets/images/image-product-2.jpg')}
+                alt="gambar 2"
                 className="lg:rounded-xl"
                 onClick={toggleNavbar}
               />
               <img
-                src="images/image-product-3.jpg"
-                alt="image-3"
+                src={require('../assets/images/image-product-3.jpg')}
+                alt="gambar 3"
                 className="lg:rounded-xl"
                 onClick={toggleNavbar}
               />
               <img
-                src="images/image-product-4.jpg"
-                alt="image-4"
+                src={require('../assets/images/image-product-4.jpg')}
+                alt="gambar 4"
                 className="lg:rounded-xl"
                 onClick={toggleNavbar}
               />
@@ -332,14 +336,14 @@ export default function FrontEndMentor_Ecomere() {
                   className="mx-auto"
                   onClick={() => dispatch({ type: "decrement" })}
                 >
-                  <img src="images/icon-minus.svg" alt="minus" />
+                  <img src={Icons.minus} alt="minus" />
                 </button>
                 <div className="font-bold">{state.jumlah}</div>
                 <button
                   className="mx-auto"
                   onClick={() => dispatch({ type: "increment" })}
                 >
-                  <img src="images/icon-plus.svg" alt="plus" />
+                  <img src={Icons.plus} alt="plus" />
                 </button>
               </div>
               <div
@@ -347,7 +351,7 @@ export default function FrontEndMentor_Ecomere() {
                 onClick={handleSubmit}
               >
                 <img
-                  src="images/icon-cart.svg"
+                  src={Icons.cart}
                   alt="cart"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
@@ -359,12 +363,12 @@ export default function FrontEndMentor_Ecomere() {
       </div>
       {/* tombol open open */}
       {total ? (
-        <div>
+        <div className="px-[21px] lg:px-0">
           <div
             className="fixed top-0 left-0 w-[100%] h-full lg:z-10 z-20"
             onClick={() => setTotal(!total)}
           ></div>
-          <div className="bg-white shadow-xl lg:w-[20%] w-full rounded-xl z-10 absolute top-20 lg:top-16 lg:right-20 h-[35%] lg:h-[20%] px-4 py-4">
+          <div className="bg-white shadow-xl lg:w-[20%] w-[90%] rounded-xl z-10 absolute top-20 lg:top-16 lg:right-20 h-[40%]  lg:h-[20%] px-4 py-4">
             <h3 className="font-bold pb-3 border-b">Cart</h3>
             {state.cart.length === 0 ? (
               <p className=" mt-8 text-center"> Your cart is empty</p>
@@ -376,12 +380,12 @@ export default function FrontEndMentor_Ecomere() {
                     className="flex justify-between items-center mt-5"
                   >
                     <img
-                      src="images/image-product-1.jpg"
-                      alt="p-1"
+                      src={require('../assets/images/image-product-1.jpg')}
+                      alt="p 1"
                       className="lg:w-10 w-20 lg:h-10 h-20 rounded-md"
                     />
                     <div>
-                      <h1 className="lg:text-[13px] text-lg">{item.name}</h1>
+                      <h1 className="lg:text-[13px] text-base">{item.name}</h1>
                       <div className="lg:text-[14px] text-lg">
                         <p>
                           $125.00 x {item.jumlah}{" "}
@@ -393,7 +397,7 @@ export default function FrontEndMentor_Ecomere() {
                     </div>
                     <button onClick={deleteAll}>
                       <img
-                        src="images/icon-delete.svg"
+                        src={Icons.delete}
                         alt="delete"
                         className="hover-filter"
                       />

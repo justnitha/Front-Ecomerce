@@ -1,7 +1,8 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Icons from './Icons';
 
 
 export default function OpenImage({toggleNavbar,cancelClose}) {
@@ -13,7 +14,7 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
         onClick={(e) =>{
           props.onClick(e);
         }}>
-          <img src="images/icon-previous.svg" alt="prev" className='hover-filter' />
+          <img src={Icons.previous} alt="" className='hover-filter' />
         </button>
       );
     
@@ -22,7 +23,7 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
          onClick={(e) =>{
           props.onClick(e);
         }}>
-          <img src="images/icon-next.svg" alt="next" className='hover-filter ' />
+          <img src={Icons.next} alt="" className='hover-filter ' />
         </button>
       );
 
@@ -40,7 +41,7 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
               }`}
             >
               <img
-                src={`images/image-product-${i + 1}-thumbnail.jpg`}
+                src={require(`../assets/images/image-product-${i + 1}-thumbnail.jpg`)}
                 className={`rounded-md`}
               />
             </div>
@@ -61,22 +62,22 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
       <img src="images/icon-close.svg" alt="close" className='hover-filter cursor-pointer ms-auto filter' onClick={toggleNavbar} />
         <Slider {...settings} className="mx-auto mt-7 relative" >
             <img
-              src="images/image-product-1.jpg"
-              alt="image-1"
+              src={require('../assets/images/image-product-1.jpg')}
+              alt=""
               className="rounded-xl"
             />
             <img
-              src="images/image-product-2.jpg"
+              src={require('../assets/images/image-product-2.jpg')}
               alt="image-2"
               className="rounded-xl"
             />
             <img
-              src="images/image-product-3.jpg"
+             src={require('../assets/images/image-product-3.jpg')}
               alt="image-3"
               className="rounded-xl"
             />
             <img
-              src="images/image-product-4.jpg"
+              src={require('../assets/images/image-product-4.jpg')}
               alt="image-4"
               className="rounded-xl"
             />
