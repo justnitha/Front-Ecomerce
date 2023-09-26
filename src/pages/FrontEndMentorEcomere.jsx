@@ -347,7 +347,7 @@ export default function FrontEndMentorEcomere() {
                 </button>
               </div>
               <div
-                className="lg:w-[64%] py-2 mt-3 lg:mt-0 font-bold flex justify-center gap-4 bg-Orange text-white rounded-lg items-center cursor-pointer"
+                className="lg:w-[64%] py-2 mt-3 lg:mt-0 font-bold flex justify-center gap-4 bg-Orange hover:bg-orange-400 text-white rounded-lg items-center cursor-pointer"
                 onClick={handleSubmit}
               >
                 <img
@@ -368,7 +368,7 @@ export default function FrontEndMentorEcomere() {
             className="fixed top-0 left-0 w-[100%] h-full lg:z-10 z-20"
             onClick={() => setTotal(!total)}
           ></div>
-          <div className="bg-white shadow-xl lg:w-[20%] w-[90%] rounded-xl z-10 absolute top-20 lg:top-16 lg:right-20 h-[40%]  lg:h-[20%] px-4 py-4">
+          <div className="bg-white shadow-xl lg:w-[20%] w-[90%] rounded-xl z-20 lg:z-10 absolute top-20 lg:top-16 lg:right-20 h-[40%]  lg:h-[20%] px-4 py-4">
             <h3 className="font-bold pb-3 border-b">Cart</h3>
             {state.cart.length === 0 ? (
               <p className=" mt-8 text-center"> Your cart is empty</p>
@@ -386,7 +386,7 @@ export default function FrontEndMentorEcomere() {
                     />
                     <div>
                       <h1 className="lg:text-[13px] text-base">{item.name}</h1>
-                      <div className="lg:text-[14px] text-lg">
+                      <div className="lg:text-[14px] text-base">
                         <p>
                           $125.00 x {item.jumlah}{" "}
                           <span className="font-bold">
