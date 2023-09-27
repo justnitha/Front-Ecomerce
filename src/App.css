@@ -56,7 +56,7 @@ body {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  /white-space: nowrap;
+  white-space: nowrap;
 }
 
 .cart-icon:hover .tooltip {
@@ -65,7 +65,7 @@ body {
 
 /* Navbar */
 
-.nav {
+.nav { /*unutk buka*/
   position: fixed;
   padding: 1rem;
   height: 100%;
@@ -74,5 +74,47 @@ body {
   top: 0;
   left: 0;
   background-color: white;
-  transition: width 0.5s ease;
+  transition: width 0.5s ease-in-out;
+}
+.navt {  /*unutk tutup*/
+  position: fixed;
+  padding: 0rem;
+  height: 100%;
+  z-index: 30;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav.buka{
+  animation: buka 0.5s;
+}
+.navt.tutup{
+  animation: tutup 0.5s;
+}
+
+@keyframes buka {
+  0% {
+    width:0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  100% {
+    width:60%;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+@keyframes tutup {
+  0% {
+    width:60%;
+    transform-origin: right;
+  }
+  100% {
+    width: 0%;
+    transform-origin: right;
+  }
 }

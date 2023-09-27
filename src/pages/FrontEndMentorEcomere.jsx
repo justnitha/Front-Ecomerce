@@ -76,6 +76,7 @@ export default function FrontEndMentorEcomere() {
     }, 700);
   };
 
+  
   function deleteAll() {
     dispatch({ type: "delete" });
   }
@@ -154,7 +155,7 @@ export default function FrontEndMentorEcomere() {
       {/* desktop navbar*/}
       <nav className="lg:flex justify-between items-center border-b hidden">
         <ul className="lg:flex gap-5 items-center cursor-pointer hidden">
-          <h1 className="font-bold text-4xl">sneakers</h1>
+          <h1 className="font-bold text-4xl hover:animate-bounce">sneakers</h1>
           <a href="https://justnitha.github.io/Front-Ecomerce/">
             <li className=" hover:border-b-2 hover:border-Orange py-6">
               Collections
@@ -205,7 +206,7 @@ export default function FrontEndMentorEcomere() {
           <img
             src={Icons.menu}
             alt="menu"
-            className="mt-2 cursor-pointer"
+            className="mt-2 cursor-pointer hover-filter"
             onClick={openNavbar}
           />
           <h1 className="font-bold text-4xl">sneakers</h1>
@@ -220,7 +221,6 @@ export default function FrontEndMentorEcomere() {
               alt="cart"
               className="hover-filter"
             />
-            {/* <div className="tooltip">Teks Pesan Sukses</div> */}
           </button>
           <img
             src={require('../assets/images/image-avatar.png')}
@@ -229,13 +229,15 @@ export default function FrontEndMentorEcomere() {
           />
         </div>
       </nav>
-      {openNav ? (
+      
+      {/* {openNav  ? ( */}
         <div>
-          <div
-            className="bg-black fixed top-0 w-full h-full lg:z-10 z-20  opacity-40"
+          <div 
+            className={`${openNav? 'bg-black fixed top-0 w-full h-full lg:z-10 z-20  opacity-40':''}`}
             onClick={openNavbar}
           ></div>
-          <div className={`nav`}>
+          <div className={` ${openNav ? 'nav buka' : 'navt tutup'}`}>
+          {openNav ? (<div>
             <img
               src={Icons.close}
               alt="close"
@@ -244,27 +246,26 @@ export default function FrontEndMentorEcomere() {
             />
             <ul className="cursor-pointer mt-10 ">
               <a href="https://justnitha.github.io/Front-Ecomerce/">
-                <li className="mt-3 font-bold text-lg">Collections</li>
+                <li className="mt-3 font-bold text-lg hover:text-Orange">Collections</li>
               </a>
               <a href="https://justnitha.github.io/Front-Ecomerce/">
-                <li className="mt-3 font-bold text-lg">Men</li>
+                <li className="mt-3 font-bold text-lg hover:text-Orange">Men</li>
               </a>
               <a href="https://justnitha.github.io/Front-Ecomerce/">
-                <li className="mt-3 font-bold text-lg">Women</li>
+                <li className="mt-3 font-bold text-lg hover:text-Orange">Women</li>
               </a>
               <a href="https://justnitha.github.io/Front-Ecomerce/">
-                <li className="mt-3 font-bold text-lg">About</li>
+                <li className="mt-3 font-bold text-lg hover:text-Orange">About</li>
               </a>
               <a href="https://justnitha.github.io/Front-Ecomerce/">
-                <li className="mt-3 font-bold text-lg">Contact</li>
+                <li className="mt-3 font-bold text-lg hover:text-Orange">Contact</li>
               </a>
             </ul>
+          </div>) : (<div></div>)}
+            
           </div>
         </div>
-      ) : (
-        <div></div>
-      )}
-
+     
       {/* foto */}
       <div className="lg:flex lg:mt-16 items-center pb-5 lg:pb-0">
         <div className="lg:w-[50%] cursor-pointer">
