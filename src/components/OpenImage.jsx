@@ -43,6 +43,7 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
               <img
                 src={require(`../assets/images/image-product-${i + 1}-thumbnail.jpg`)}
                 className={`rounded-md`}
+                alt='foto semua'
               />
             </div>
           );
@@ -59,26 +60,26 @@ export default function OpenImage({toggleNavbar,cancelClose}) {
       };
   return (
     <div className='w-[45%] mx-auto' onClick={cancelClose}>
-      <img src="images/icon-close.svg" alt="close" className='hover-filter cursor-pointer ms-auto filter' onClick={toggleNavbar} />
+      <img src={Icons.close} alt="close" className='hover-filter cursor-pointer ms-auto filter' onClick={toggleNavbar} />
         <Slider {...settings} className="mx-auto mt-7 relative" >
             <img
               src={require('../assets/images/image-product-1.jpg')}
-              alt=""
+              alt="foto 1"
               className="rounded-xl"
             />
             <img
               src={require('../assets/images/image-product-2.jpg')}
-              alt="image-2"
+              alt="foto 2"
               className="rounded-xl"
             />
             <img
              src={require('../assets/images/image-product-3.jpg')}
-              alt="image-3"
+              alt="foto 3"
               className="rounded-xl"
             />
             <img
               src={require('../assets/images/image-product-4.jpg')}
-              alt="image-4"
+              alt="foto 4"
               className="rounded-xl"
             />
           </Slider>
