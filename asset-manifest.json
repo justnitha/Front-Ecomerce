@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Front-Ecomerce/static/css/main.64996c7d.css",
-    "main.js": "/Front-Ecomerce/static/js/main.034ed46f.js",
+    "main.js": "/Front-Ecomerce/static/js/main.08e3f3ad.js",
     "static/js/787.0173ad92.chunk.js": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js",
     "static/media/image-product-2.jpg": "/Front-Ecomerce/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
     "static/media/image-product-1.jpg": "/Front-Ecomerce/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
@@ -21,11 +21,11 @@
     "static/media/icon-previous.svg": "/Front-Ecomerce/static/media/icon-previous.80616402c611cc0a6651d0b751da8a9b.svg",
     "static/media/icon-next.svg": "/Front-Ecomerce/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
     "main.64996c7d.css.map": "/Front-Ecomerce/static/css/main.64996c7d.css.map",
-    "main.034ed46f.js.map": "/Front-Ecomerce/static/js/main.034ed46f.js.map",
+    "main.08e3f3ad.js.map": "/Front-Ecomerce/static/js/main.08e3f3ad.js.map",
     "787.0173ad92.chunk.js.map": "/Front-Ecomerce/static/js/787.0173ad92.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64996c7d.css",
-    "static/js/main.034ed46f.js"
+    "static/js/main.08e3f3ad.js"
   ]
 }
