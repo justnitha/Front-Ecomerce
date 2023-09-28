@@ -37,6 +37,8 @@ function reducer(state, action) {
         };
       } else if (state.jumlah === 1) {
         return { harga: 125.0, jumlah: 0, name: state.name };
+      } else if (state.jumlah === 0) {
+        return { harga: 125.0, jumlah: 0, name: state.name };
       }
       break;
     case "addToCart":
@@ -271,7 +273,7 @@ export default function FrontEndMentorEcomere() {
         <div className="lg:w-[50%] cursor-pointer">
           {/* mobile */}
           <div className="lg:hidden">
-            <Slider {...settings} className="mx-auto ">
+            <Slider {...settings} className="mx-auto cursor-auto ">
               <img src={require('../assets/images/image-product-1.jpg')} alt="gambar 1" />
               <img src={require('../assets/images/image-product-2.jpg')} alt="gambar 2" />
               <img src={require('../assets/images/image-product-3.jpg')} alt="gambar 3" />
@@ -334,17 +336,17 @@ export default function FrontEndMentorEcomere() {
             <div className="lg:flex gap-5 mt-7">
               <div className="grid grid-cols-3 bg-Light-GrayishBlue py-2 rounded-lg lg:w-[36%] text-center ">
                 <button
-                  className="mx-auto"
+                  className="w-full"
                   onClick={() => dispatch({ type: "decrement" })}
                 >
-                  <img src={Icons.minus} alt="minus" />
+                  <img src={Icons.minus} alt="minus" className="mx-auto" />
                 </button>
-                <div className="font-bold">{state.jumlah}</div>
+                <div className="font-bold w-full">{state.jumlah}</div>
                 <button
-                  className="mx-auto"
+                  className="w-full mx-auto"
                   onClick={() => dispatch({ type: "increment" })}
                 >
-                  <img src={Icons.plus} alt="plus" />
+                  <img src={Icons.plus} alt="plus" className="mx-auto" />
                 </button>
               </div>
               <div
