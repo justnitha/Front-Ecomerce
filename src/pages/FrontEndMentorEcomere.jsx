@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import OpenImage from "../components/OpenImage";
 import Icons from "../components/Icons.js"
+import swal from "sweetalert";
 
 
 // Inisialisasi state awal
@@ -69,6 +70,20 @@ export default function FrontEndMentorEcomere() {
     if (state.jumlah >= 1) {
       e.preventDefault();
       dispatch({ type: "addToCart" });
+      swal({
+        icon: "success",
+        title: "Berhasil ditambahkan",
+        buttons: {
+          confirm: {
+            text: "OK",
+            value: true,
+            visible: true,
+            className: "bg-Orange",
+            closeModal: true,
+          },
+        },
+      });
+      
     } else {
     }
 
@@ -364,7 +379,7 @@ export default function FrontEndMentorEcomere() {
           </div>
         </div>
       </div>
-      {/* tombol open open */}
+      {/* tombol cart */}
       {total ? (
         <div className="px-[21px] lg:px-0">
           <div
@@ -376,7 +391,7 @@ export default function FrontEndMentorEcomere() {
             {state.cart.length === 0 ? (
               <p className=" mt-8 text-center"> Your cart is empty</p>
             ) : (
-              <div>
+              <div className="relative">
                 {state.cart.map((item, index) => (
                   <div
                     key={index}
@@ -391,9 +406,9 @@ export default function FrontEndMentorEcomere() {
                       <h1 className="lg:text-[13px] text-base">{item.name}</h1>
                       <div className="lg:text-[14px] text-base">
                         <p>
-                          $125.00 x {item.jumlah}{" "}
+                          $125.00 x {state.jumlah}{" "}
                           <span className="font-bold">
-                            ${item.harga.toFixed(2)}
+                            ${state.harga.toFixed(2)}
                           </span>
                         </p>
                       </div>
@@ -409,6 +424,21 @@ export default function FrontEndMentorEcomere() {
                 ))}
               </div>
             )}
+            <div className={`grid grid-cols-3 bg-Light-GrayishBlue py-2 rounded-lg lg:hidden w-full text-center mt-[80px] ${state.cart.length === 0 ? 'hidden' : ''}`}>
+                  <button
+                    className="w-full"
+                    onClick={() => dispatch({ type: "decrement" })}
+                  >
+                    <img src={Icons.minus} alt="minus" className="mx-auto" />
+                  </button>
+                  <div className="font-bold w-full">{state.jumlah}</div>
+                  <button
+                    className="w-full mx-auto"
+                    onClick={() => dispatch({ type: "increment" })}
+                  >
+                    <img src={Icons.plus} alt="plus" className="mx-auto" />
+                  </button>
+                </div>
           </div>
         </div>
       ) : (
