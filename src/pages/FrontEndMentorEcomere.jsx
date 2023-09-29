@@ -386,7 +386,7 @@ export default function FrontEndMentorEcomere() {
             className="fixed top-0 left-0 w-[100%] h-full lg:z-10 z-20"
             onClick={() => setTotal(!total)}
           ></div>
-          <div className="bg-white shadow-xl lg:w-[20%] w-[90%] rounded-xl z-20 lg:z-10 absolute top-20 lg:top-16 lg:right-20 h-[40%]  lg:h-[20%] px-4 py-4">
+          <div className="bg-white shadow-xl lg:w-[20%] w-[90%] rounded-xl z-20 lg:z-10 absolute top-20 lg:top-16 lg:right-20 h-[44%]  lg:h-[20%] px-4 py-4">
             <h3 className="font-bold pb-3 border-b">Cart</h3>
             {state.cart.length === 0 ? (
               <p className=" mt-8 text-center"> Your cart is empty</p>
