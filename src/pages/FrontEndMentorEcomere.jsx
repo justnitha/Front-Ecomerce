@@ -395,7 +395,7 @@ export default function FrontEndMentorEcomere() {
                 {state.cart.map((item, index) => (
                   <div
                     key={index}
-                    className="flex justify-between items-center mt-5"
+                    className="flex justify-between items-center gap-5 lg:gap-0 mt-5 btmn"
                   >
                     <img
                       src={require('../assets/images/image-product-1.jpg')}
@@ -424,7 +424,7 @@ export default function FrontEndMentorEcomere() {
                 ))}
               </div>
             )}
-            <div className={`grid grid-cols-3 bg-Light-GrayishBlue py-2 rounded-lg lg:hidden w-full text-center mt-[80px] ${state.cart.length === 0 ? 'hidden' : ''}`}>
+            <div className={`grid grid-cols-3 bg-Light-GrayishBlue py-2 rounded-lg lg:hidden w-full text-center  ${state.cart.length === 0 ? 'hidden' : ''}`}>
                   <button
                     className="w-full"
                     onClick={() => dispatch({ type: "decrement" })}

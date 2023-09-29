@@ -119,24 +119,30 @@ body {
   }
 }
 /* swwelalert */
-/* .swal-button {
-  padding: 7px 19px;
-  border-radius: 2px;
-  background-color: #ff7d1a;
-  font-size: 12px;
-  border: none;
-  text-shadow: none;
-}
-/* .swal-button:hover{
-  background-color: none;
-} */ 
 
-/* Warna latar belakang tombol saat dihover */
 .swal-button--confirm:hover {
   background-color: orange !important;
 }
 
-/* Warna teks tombol saat dihover */
-/* .swal-button--confirm:hover:not([disabled]) {
-  color: white !important;
-} */
+/* media screeen  cart mobile */
+
+@media only screen and (min-width: 360px) {
+  .btmn {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .btmn {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 390px) {
+  .btmn {
+    margin-bottom: 90px;
+  }
+}
+@media only screen and (min-width: 412px) {
+  .btmn {
+    margin-bottom: 110px;
+  }
+}
