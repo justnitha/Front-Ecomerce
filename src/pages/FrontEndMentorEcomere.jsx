@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer,useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -65,6 +65,18 @@ export default function FrontEndMentorEcomere() {
   const [cartAnimation, setCartAnimation] = useState(false);
   const [total, setTotal] = useState(false);
   const [openNav, setOpenNav] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [open]);
 
   const handleSubmit = (e) => {
     if (state.jumlah >= 1) {
@@ -200,7 +212,7 @@ export default function FrontEndMentorEcomere() {
         <div className="flex gap-4 items">
           <button
             onClick={() => setTotal(!total)}
-            className={`cart-icon ${cartAnimation ? "animate-cart" : ""}`}
+            className={`cart-icon hover:animate-bounce ${cartAnimation ? "animate-cart" : ""}`}
           >
             <img
               src={Icons.cart}
@@ -447,7 +459,7 @@ export default function FrontEndMentorEcomere() {
       {/*foto open  */}
       {open ? (
         <div onClick={toggleNavbar}>
-          <div className="bg-black absolute w-full left-0 h-full top-0 opacity-70"></div>
+          <div className="bg-black absolute w-full left-0 h-[110%] top-0 opacity-70"></div>
           <div className=" w-[80%] absolute text-center mx-auto top-20">
             <OpenImage toggleNavbar={toggleNavbar} cancelClose={cancelClose} />
           </div>
